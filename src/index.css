@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply box-border;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply bg-dark-bg text-white font-sans;
+  color-scheme: dark;
+}
+
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neon-cyan/30 rounded hover:bg-neon-cyan/50;
+}
+
+/* Neon glow utilities */
+@layer components {
+  .glow-cyan {
+    @apply shadow-glow-cyan drop-shadow-glow-cyan;
+  }
+
+  .glow-purple {
+    @apply shadow-glow-purple drop-shadow-glow-purple;
+  }
+
+  .glow-pink {
+    @apply shadow-glow-pink drop-shadow-glow-pink;
+  }
+
+  .glow-border-cyan {
+    @apply border border-neon-cyan shadow-glow-cyan;
+  }
+
+  .glow-border-purple {
+    @apply border border-neon-purple shadow-glow-purple;
+  }
+
+  .glow-border-pink {
+    @apply border border-neon-pink shadow-glow-pink;
+  }
+
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+  }
+
+  .glass-lg {
+    @apply glass rounded-3xl;
+  }
+}
