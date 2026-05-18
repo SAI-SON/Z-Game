@@ -7,6 +7,7 @@ export function getFirebaseErrorMessage(error: unknown): string {
       : '';
 
   switch (code) {
+    case 'auth/admin-restricted-operation':
     case 'auth/operation-not-allowed':
       return 'Anonymous sign-in is disabled. In Firebase Console → Authentication → Sign-in method, enable Anonymous.';
     case 'auth/popup-blocked':
